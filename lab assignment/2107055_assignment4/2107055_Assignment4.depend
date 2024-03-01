@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1705772649 source:c:\users\hp\onedrive\desktop\2107055_assignment4\main.cpp
+	<iostream>
+	"2107055_assignment4.h"
+
+1705772649 c:\users\hp\onedrive\desktop\2107055_assignment4\2107055_assignment4.h
+	<iostream>
+
