@@ -45,13 +45,13 @@ void insertAtPosition(node *&head, int val, int pos)
         return;
     }
     node *temp = head;
-    for (int i = 1; i < pos-1 && temp != NULL; ++i)
+    for (int i = 1; i < pos - 1 && temp != NULL; ++i)
     {
         temp = temp->next;
     }
-    if(temp==NULL)
+    if (temp == NULL)
     {
-        cout<<"out of range"<<endl;
+        cout << "out of range" << endl;
         return;
     }
     newnode->next = temp->next;
@@ -69,15 +69,44 @@ void traverse(node *head)
 }
 int length(node *&head)
 {
-    int cnt=0;
-    node *temp=head;
-    while(temp!=NULL)
+    int cnt = 0;
+    node *temp = head;
+    while (temp != NULL)
     {
         cnt++;
-        temp=temp->next;
+        temp = temp->next;
     }
     return cnt;
 }
+bool searchELE(node *&head, int val)
+{
+    node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->data == val)
+        {
+            return true;
+        }
+        temp = temp->next;
+    }
+    return false;
+}
+int searchELEposition(node *head, int val)
+{
+    node *temp = head;
+    int cnt = 0;
+    while (temp != NULL)
+    {
+        cnt++;
+        if (temp->data == val)
+        {
+            return cnt; // Return the position of the first occurrence
+        }
+        temp = temp->next;
+    }
+    return -1; // Return -1 if the value is not found
+}
+
 int main()
 {
     node *head = NULL;
@@ -86,7 +115,9 @@ int main()
     insertFirst(head, 20);
     insertFirst(head, 30);
     insertLast(head, 40);
-    insertAtPosition(head,55,8);
+    insertAtPosition(head, 55, 8);
     traverse(head);
-    cout<<length(head)<<endl;
+    cout << length(head) << endl;
+    cout << searchELE(head, 55) << endl;
+    cout << searchELEposition(head, 77) << endl;
 }
