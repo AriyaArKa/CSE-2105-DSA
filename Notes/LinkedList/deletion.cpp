@@ -73,17 +73,17 @@ node *deleteByPosition(node *&head, int k)
         deleteFirst(head);
     }
     int cnt = 0;
-    node *temp = head, *prev = NULL;
+    node *temp = head, *cur = NULL;
     while (temp != NULL)
     {
         cnt++;
         if (cnt == k)
         {
-            prev->next = prev->next->next;
+            cur->next = cur->next->next;
             free(temp);
             break;
         }
-        prev = temp;
+        cur = temp;
         temp = temp->next;
     }
 }
