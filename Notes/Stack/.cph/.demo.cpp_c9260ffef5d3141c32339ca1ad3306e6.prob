@@ -1,0 +1,1 @@
+{"name":"Local: demo","url":"e:\\cse\\DSA\\Notes\\Stack\\demo.cpp","tests":[{"id":1712933045123,"input":"5\n1 1 1\n5 1 1\n5 2 1\n5 2 2\n5 5 3","output":"NO\nNO\nYES\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\cse\\DSA\\Notes\\Stack\\demo.cpp","group":"local","local":true}
